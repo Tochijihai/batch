@@ -1,9 +1,13 @@
-"""全てのルーティングを管理"""
+"""メイン処理"""
 import asyncio
 from typing import List
+from dotenv import load_dotenv
 from app.services.llm_chat_service import LLMChatService
 from app.infrastructure.bedrock_chat_llm_client import BedrockChatLLMClient
 from app.domain.chat import Message, Chat
+
+# 環境変数を読み込み
+load_dotenv()
 
 
 async def main():
